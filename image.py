@@ -112,7 +112,7 @@ def draw_bboxes_and_index_on_images(json_path, image_folder):
 
 # Example
 draw_bboxes_and_index_on_images(
-    "assets/eco/eco_short_objects.json", "assets/eco/objects"
+    "assets/math/math_short_objects.json", "assets/math/objects"
 )
 
 
