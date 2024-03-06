@@ -112,7 +112,7 @@ def draw_bboxes_and_index_on_images(json_path, image_folder):
 
 # Example
 draw_bboxes_and_index_on_images(
-    "assets/chem/chem_short_objects.json", "assets/chem/objects"
+    "assets/eco/eco_short_objects.json", "assets/eco/objects"
 )
 
 
@@ -135,25 +135,25 @@ def encode_image(image_path):
 
 # headers = {"Content-Type": "application/json", "Authorization": f"Bearer {api_key}"}
 
-payload = {
-    "model": "gpt-4-vision-preview",
-    "messages": [
-        {
-            "role": "user",
-            "content": [
-                {
-                    "type": "text",
-                    "text": """I want you to work as an image semantic analyzer, in which your task is to identify the objects within the image and specifically the relationships between these objects at a semantic level. You are given an annotated image with red b-boxs and their id around the box, which has already facilitated the object detection part. The image comes from screenshots from BlackBoard Video so it's filled with illustrations and texts, you should identify the relationships between these objects.
-Considering the relationships, I only need you to to identify if there are LINEs or ARROWs DIRECTLY in the image showing the direct relationships between bboxs.
-Other levels of relationships are not considered. If there are no line connections or arrows in all the bboxs, output a [] is ok You are given:
-1, image;
-You should return me:
-｛
-"relation": [//The related object, should be shown together
-2,
-3
-]
-}""",
+# payload = {
+#     "model": "gpt-4-vision-preview",
+#     "messages": [
+#         {
+#             "role": "user",
+#             "content": [
+#                 {
+#                     "type": "text",
+#                     "text": """I want you to work as an image semantic analyzer, in which your task is to identify the objects within the image and specifically the relationships between these objects at a semantic level. You are given an annotated image with red b-boxs and their id around the box, which has already facilitated the object detection part. The image comes from screenshots from BlackBoard Video so it's filled with illustrations and texts, you should identify the relationships between these objects.
+# Considering the relationships, I only need you to to identify if there are LINEs or ARROWs DIRECTLY in the image showing the direct relationships between bboxs.
+# Other levels of relationships are not considered. If there are no line connections or arrows in all the bboxs, output a [] is ok You are given:
+# 1, image;
+# You should return me:
+# ｛
+# "relation": [//The related object, should be shown together
+# 2,
+# 3
+# ]
+# }""",
 #                 },
 #                 {
 #                     "type": "image_url",

@@ -102,8 +102,8 @@ def draw_bboxes_and_ids_on_images(json_path, image_folder, image_path, count):
 # )
 
 draw_bboxes_and_ids_on_final_images(
-    "assets/chem/chem_short_objects.json",
-    "assets/chem/objects",
-    "assets/chem/images/7210.png",
+    "assets/eco/eco_short_objects.json",
+    "assets/eco/objects",
+    "assets/eco/images/6290.png",
     False,
 )
