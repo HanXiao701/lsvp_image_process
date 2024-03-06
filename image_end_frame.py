@@ -23,7 +23,7 @@ def draw_bboxes_and_ids_on_final_images(
         for key, value in data.items():
             # iterate bounding-box for each object
             annotate_index = annotate_index + 1
-            bbox_index = 0
+            bbox_index = -1
             for index, bbox in enumerate(value.get("bbox", [])):
                 # bbox in [x, y, width, height]
                 bbox_index = bbox_index + 1
