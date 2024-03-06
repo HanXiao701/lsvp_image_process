@@ -14,7 +14,7 @@ import torch.backends.cudnn as cudnn
 from torch.autograd import Variable
 
 from PIL import Image
-from skimage import io
+# from skimage import io
 import craft_utils
 import imgproc
 import file_utils
