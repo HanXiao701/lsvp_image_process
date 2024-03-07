@@ -637,9 +637,9 @@ class ExtractObjects:
 
 
 if __name__ == "__main__":
-    video_name = "Muscle"  # input video name here
+    video_name = "Urination"  # input video name here
     # complex_pat5
-    video_type = "mp4"  # generally mp4
+    video_type = "mov"  # generally mp4
     cursor_type = "cursor_bio"  # input cursor type here
 
     # darker colors need lower threshold
